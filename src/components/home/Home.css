@@ -1,0 +1,131 @@
+#home {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 5rem;
+}
+.hero-el {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.hero-el-row {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.hero-el-col {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero-code-row {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.i-am {
+  font-family: "Slackey", sans-serif;
+  color: var(--textColor);
+  font-size: 80px;
+  text-align: center;
+  text-wrap: wrap;
+  word-break: normal;
+  word-wrap: break-word;
+  animation: float 5s ease-in-out infinite;
+  animation-timing-function: ease-in-out;
+}
+.title-anim-span {
+  display: inline-block;
+  position: relative;
+  text-wrap: wrap;
+}
+.title-anim-span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #cb2424, #5e50f8);
+  filter: drop-shadow(0 0 5px #cb2424) drop-shadow(0 0 25px #5e50f8);
+  animation: titleAnimation 5s ease-in-out infinite;
+}
+@keyframes titleAnimation {
+  0%,
+  100% {
+    left: 0%;
+  }
+  50% {
+    left: 100%;
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+.prog-lang-brand {
+  color: var(--colorProgLangBrand);
+  width: 262px;
+  height: 232px;
+  animation: float 5s ease-in-out infinite;
+  animation-timing-function: ease-in-out;
+}
+.img-rafael-background {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+  z-index: -9999;
+}
+.syntax-high {
+  font-size: 22px;
+  border-radius: 8px;
+  max-width: 90vw;
+  margin: 0;
+}
+
+@media (max-width: 399px) {
+  .hero-el-row {
+    flex-direction: column;
+  }
+  .i-am {
+    font-size: 50px;
+  }
+  .prog-lang-brand {
+    width: 122px;
+    height: 101px;
+  }
+  .syntax-high {
+    font-size: 12px;
+  }
+}
+@media (min-width: 400px) and (max-width: 899px) {
+  .hero-el-row {
+    flex-direction: column;
+  }
+  .i-am {
+    font-size: 50px;
+  }
+  .prog-lang-brand {
+    width: 122px;
+    height: 101px;
+  }
+  .syntax-high {
+    font-size: 14px;
+  }
+}
