@@ -1,8 +1,10 @@
 #home {
   display: flex;
-  flex: 1;
+  /* flex: 1; */
   flex-direction: column;
-  padding: 5rem;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
 }
 .hero-el {
   display: flex;
@@ -37,7 +39,6 @@
   font-size: 80px;
   text-align: center;
   text-wrap: wrap;
-  word-break: normal;
   word-wrap: break-word;
   animation: float 5s ease-in-out infinite;
   animation-timing-function: ease-in-out;
@@ -93,7 +94,7 @@
   z-index: -9999;
 }
 .syntax-high {
-  font-size: 22px;
+  font-size: 18px;
   border-radius: 8px;
   max-width: 90vw;
   margin: 0;
@@ -104,7 +105,7 @@
     flex-direction: column;
   }
   .i-am {
-    font-size: 50px;
+    font-size: 45px;
   }
   .prog-lang-brand {
     width: 122px;

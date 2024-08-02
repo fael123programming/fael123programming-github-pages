@@ -1,13 +1,25 @@
-import React, { useState, useEffect } from "react";
-import Home from "./components/home/Home";
+import React, { useEffect } from "react";
 import Header from "./components/header/Header";
 import "./App.css";
 import { Style } from "./utils/Constants";
 import { useAppState } from "./state/AppStateContext";
+// import useCurrentComponent from "./hooks/useCurrentComponent";
+import Home from "./components/home/Home";
+import AboutMe from "./components/aboutMe/AboutMe";
+import {
+  Animator,
+  ScrollContainer,
+  ScrollPage,
+  batch,
+  Fade,
+  MoveOut,
+  Sticky,
+} from "react-scroll-motion";
 
 export default function App() {
   const { theme } = useAppState();
-  const [scrollDown, setScrollDown] = useState(false);
+
+  // const current = useCurrentComponent();
 
   // If theme changes, change CSS variables within App.css
   useEffect(() => {
@@ -28,18 +40,21 @@ export default function App() {
     }
   }, [theme]);
 
-  useEffect(() => {
-    const handleOnWheel = (event) =>
-      setScrollDown(event.deltaY < 0 ? true : false);
-    window.addEventListener("wheel", handleOnWheel);
-    return () => window.removeEventListener("wheel", handleOnWheel);
-  }, []);
-
-
   return (
-    <>
+    <div>
       <Header />
-      <Home />
-    </>
+      <ScrollContainer snap="proximity">
+        <ScrollPage>
+          <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
+            <Home />
+          </Animator>
+        </ScrollPage>
+        <ScrollPage>
+          <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
+            <AboutMe />
+          </Animator>
+        </ScrollPage>
+      </ScrollContainer>
+    </div>
   );
 }

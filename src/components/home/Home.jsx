@@ -44,26 +44,21 @@ export default function Home() {
             setCodeIndex(codeIndex + 1);
             setCode(codes[codeIndex + 1]);
           }
+          if (titleIndex === titles.length - 1) {
+            setTitleIndex(0);
+          } else {
+            setTitleIndex(titleIndex + 1);
+          }
           clearTimeout(innerTout);
-        }, 10000);
+        }, 5000);
       } else {
         setStrIndex(strIndex + 1);
       }
-    }, 10);
-  }, [codes, codeIndex, code, strIndex]);
-
-  useEffect(() => {
-    setTimeout(() => {
-      if (titleIndex === titles.length - 1) {
-        setTitleIndex(0);
-      } else {
-        setTitleIndex(titleIndex + 1);
-      }
-    }, 5000);
-  }, [titleIndex, titles]);
+    }, 5);
+  }, [codes, codeIndex, code, strIndex, titleIndex, titles]);
 
   return (
-    <div id="home" className="slide-in">
+    <div id="home" >
       <div className="hero-el">
         <div className="hero-el-row">
           <div className="hero-el-col">

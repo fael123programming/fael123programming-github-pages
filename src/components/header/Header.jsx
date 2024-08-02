@@ -6,7 +6,8 @@ import "./Header.css";
 import { useAppState } from "../../state/AppStateContext";
 
 export default function Header() {
-  const { lang, dict , switchLang, switchTheme, toggleMenu, isDark } = useAppState();
+  const { lang, dict, switchLang, switchTheme, toggleMenu, isDark } =
+    useAppState();
 
   function click(target, focus) {
     let lis = document.querySelectorAll(".nav-ul-lis");
@@ -77,7 +78,15 @@ export default function Header() {
       </nav>
       <div className="mobile-box">
         <div className="menu">
-          <h1 className="logo">
+          <h1
+            className="logo"
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/rafael-guimar%C3%A3es-9a8b251a9",
+                "_new"
+              )
+            }
+          >
             <span className="red">fael123</span>
             <span className="blue">programming</span>
           </h1>
