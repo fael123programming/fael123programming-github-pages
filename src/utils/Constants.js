@@ -5,6 +5,9 @@ const Values = {
   PORTUGUESE: "PT",
   DARK: "dark",
   LIGHT: "light",
+  HOME: "home",
+  ABOUT_ME: "about me",
+  PROJECTS: "projects",
 };
 
 const Style = {
@@ -127,6 +130,11 @@ public class PortfolioWebsite {
 
 main();
 `,
+    aboutAboutMe: "About Me",
+    aboutAboutMeDescription:
+      "I am a Brazilian software engineer with a degree in Computer Science (IF Goiano) and specialized in Full-Stack development.",
+    aboutAboutMePortugal:
+      "In the first half of 2023, I was awarded a scholarship to study in Bragança, Portugal, due to my high Grade Point Average (GPA). During the six-month program, I studied disciplines such as Cross-Platform Development and Embedded Systems.",
   },
   [Values.PORTUGUESE]: {
     homeHome: "Bem-vindo",
@@ -227,6 +235,11 @@ public class PortfolioWebsite {
 
 main();
 `,
+    aboutAboutMe: "Sobre Mim",
+    aboutAboutMeDescription:
+      "Eu sou um engenheiro de software Brasileiro, bacharel em Ciência da Computação (IF Goiano) e especializado em desenvolvimento Full-Stack.",
+    aboutAboutMePortugal:
+      "Na primeira metade de 2023, fui contemplado com uma bolsa de estudos para estudar em Bragança, Portugal, devido ao meu alto Coeficiente de Rendimento (CR). Durante o programa de seis meses, estudei disciplinas como Desenvolvimento Multiplataforma e Sistemas Embarcados.",
   },
 };
 

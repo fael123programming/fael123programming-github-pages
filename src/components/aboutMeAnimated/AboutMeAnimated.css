@@ -1,4 +1,4 @@
-#about-me {
+#about-me-anim {
   display: flex;
   flex: 1;
   flex-direction: row;
@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
 }
-.about-me-col-left {
+.about-me-anim-col-left {
   display: flex;
   height: fit-content;
   flex-direction: column;
@@ -14,31 +14,29 @@
   justify-content: center;
   width: 900px;
 }
-.about-me-row {
+.about-me-anim-row {
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 100%;
 }
-.about-me-title {
+.about-me-anim-title {
   font-family: "Slackey", sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
-  /* color: var(--textColor); */
   color: #5e50f8;
   filter: drop-shadow(0 0 25px #5e50f8);
   border-radius: 8px;
 }
-.about-icon {
-  width: 60px;
-  height: 60px;
-  /* color: var(--textColor); */
+.about-anim-icon {
+  width: 50px;
+  height: 50px;
   color: #cb2424;
   filter: drop-shadow(0 0 25px #cb2424);
 }
-.about-me-para {
+.about-me-anim-para {
   font-family: "Slackey", sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   color: var(--textColor);
   padding: 1rem;
   text-align: center;
@@ -51,20 +49,7 @@
   justify-content: center;
   flex: 5;
 }
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(-20px);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-}
-.float {
-  animation: float 5s ease-in-out infinite;
-  animation-timing-function: ease-in-out;
-}
-.img-background {
+.img-background-anim {
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -74,20 +59,44 @@
   opacity: 0.1;
   z-index: -9999;
 }
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+.float-anim {
+  animation: float 5s ease-in-out infinite;
+  animation-timing-function: ease-in-out;
+}
+.anim-img {
+  width: clamp(180px, 300px, 480px);
+  height: clamp(180px, 300px, 480px);
+  margin: 1rem;
+  border-radius: 5%;
+  border: 1px solid grey;
+  transition: transform 1s ease-in-out;
+}
+.anim-img:hover {
+    transform: scale(1.5);
+}
 @media (max-width: 799px) {
-  .float {
+  .float-anim {
     display: none;
   }
 }
 @media (max-width: 399px) {
-  .about-me-title {
+  .about-me-anim-title {
     font-size: 32px;
   }
-  .about-icon {
+  .about-anim-icon {
     width: 35px;
     height: 35px;
   }
-  .about-me-para {
+  .about-me-anim-para {
     font-size: 24px;
   }
 }

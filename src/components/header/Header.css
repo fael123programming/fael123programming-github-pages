@@ -8,8 +8,9 @@
   width: 100vw;
   padding-bottom: 2rem;
   background-color: var(--backgroundColor);
-  opacity: .8;
-  top:0;
+  opacity: 0.8;
+  z-index: 10000;
+  top: 0;
 }
 #header::before {
   content: "";
@@ -28,9 +29,11 @@
 }
 .red {
   color: #cb2424;
+  filter: drop-shadow(0 0 25px #cb2424);
 }
 .blue {
   color: #5e50f8;
+  filter: drop-shadow(0 0 25px #5e50f8);
 }
 .menu {
   display: flex;

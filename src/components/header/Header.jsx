@@ -4,25 +4,39 @@ import { LuLampFloor } from "react-icons/lu";
 import { TiThMenu } from "react-icons/ti";
 import "./Header.css";
 import { useAppState } from "../../state/AppStateContext";
+import { Values } from "../../utils/Constants";
 
 export default function Header() {
-  const { lang, dict, switchLang, switchTheme, toggleMenu, isDark } =
-    useAppState();
+  const {
+    lang,
+    dict,
+    switchLang,
+    switchTheme,
+    toggleMenu,
+    isDark,
+    atHome,
+    atAboutMe,
+    atProjects,
+    toHome,
+    toAboutMe,
+    toProjects
+  } = useAppState();
 
-  function click(target, focus) {
-    let lis = document.querySelectorAll(".nav-ul-lis");
-    for (let li of lis) {
-      if (li.id === target && !li.classList.contains("active")) {
-        li.classList.add("active");
-      } else if (li.id !== target && li.classList.contains("active")) {
-        li.classList.remove("active");
-      }
+  function navigate(to) {
+    // let lis = document.querySelectorAll(".nav-ul-lis");
+    // for (let li of lis) {
+    //   if (li.id === target && !li.classList.contains("active")) {
+    //     li.classList.add("active");
+    //   } else if (li.id !== target && li.classList.contains("active")) {
+    //     li.classList.remove("active");
+    //   }
+    // }
+    if (to === Values.HOME) {
+      toHome();
+    } else if (to === Values.ABOUT_ME) {
+      toAboutMe();
     }
     toggleMobileMenu();
-    const element = document.getElementById(focus);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
   }
 
   function toggleMobileMenu() {
@@ -55,22 +69,22 @@ export default function Header() {
           </li>
           <li
             id="home-li"
-            className="nav-ul-lis active"
-            onClick={() => click("home-li", "home")}
+            className={`nav-ul-lis ${atHome() ? "active" : ""}`}
+            onClick={() => navigate(Values.HOME)}
           >
             {dict.homeHome}
           </li>
           <li
             id="about-me-li"
-            className="nav-ul-lis"
-            onClick={() => click("about-me-li", "about")}
+            className={`nav-ul-lis ${atAboutMe() ? "active" : ""}`}
+            onClick={() => navigate(Values.ABOUT_ME)}
           >
             {dict.homeAboutMe}
           </li>
           <li
             id="projects-li"
-            className="nav-ul-lis"
-            onClick={() => click("projects-li", "projects")}
+            className={`nav-ul-lis ${atProjects() ? "active" : ""}`}
+            onClick={() => navigate(Values.PROJECTS)}
           >
             {dict.homeProjects}
           </li>
@@ -99,22 +113,22 @@ export default function Header() {
             <ul className="nav-ul">
               <li
                 id="home-li"
-                className="nav-ul-lis active"
-                onClick={() => click("home-li", "home")}
+                className={`nav-ul-lis ${atHome() ? "active" : ""}`}
+                onClick={() => navigate(Values.HOME)}
               >
                 {dict.homeHome}
               </li>
               <li
                 id="about-me-li"
-                className="nav-ul-lis"
-                onClick={() => click("about-me-li", "about")}
+                className={`nav-ul-lis ${atAboutMe() ? "active" : ""}`}
+                onClick={() => navigate(Values.ABOUT_ME)}
               >
                 {dict.homeAboutMe}
               </li>
               <li
                 id="projects-li"
-                className="nav-ul-lis"
-                onClick={() => click("projects-li", "projects")}
+                className={`nav-ul-lis ${atProjects() ? "active" : ""}`}
+                onClick={() => navigate(Values.PROJECTS)}
               >
                 {dict.homeProjects}
               </li>

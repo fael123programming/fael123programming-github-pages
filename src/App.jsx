@@ -15,9 +15,10 @@ import {
   MoveOut,
   Sticky,
 } from "react-scroll-motion";
+import AboutMeAnimated from "./components/aboutMeAnimated/AboutMeAnimated";
 
 export default function App() {
-  const { theme } = useAppState();
+  const { theme, toHome, toAboutMe } = useAppState();
 
   // const current = useCurrentComponent();
 
@@ -40,10 +41,26 @@ export default function App() {
     }
   }, [theme]);
 
+  useEffect(() => {
+    const updateMenuActive = () => {
+      const windowHeight = window.innerHeight;
+      const scrollY = window.scrollY;
+      if (scrollY <= windowHeight / 2) {
+        toHome(false);
+        console.log('HOME')
+      } else if (scrollY <= windowHeight) {
+        toAboutMe(false);
+        console.log('ABOUT');
+      }
+    };
+    window.addEventListener('scroll', updateMenuActive);
+    return () => window.removeEventListener('scroll', updateMenuActive);
+  }, [toHome, toAboutMe]);
+
   return (
-    <div>
+    <>
       <Header />
-      <ScrollContainer snap="proximity">
+      <ScrollContainer snap="proximity" >
         <ScrollPage>
           <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
             <Home />
@@ -54,7 +71,12 @@ export default function App() {
             <AboutMe />
           </Animator>
         </ScrollPage>
+        <ScrollPage>
+          <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
+            <AboutMeAnimated />
+          </Animator>
+        </ScrollPage>
       </ScrollContainer>
-    </div>
+    </>
   );
 }

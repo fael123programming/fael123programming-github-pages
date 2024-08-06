@@ -8,7 +8,8 @@ export const AppStateProvider = ({ children }) => {
     lang: Values.ENGLISH,
     theme: Values.DARK,
     menuOpen: false,
-    dict: Lang[Values.ENGLISH]
+    dict: Lang[Values.ENGLISH],
+    menuActive: Values.HOME,
   });
 
   const switchLang = () => {
@@ -37,13 +38,65 @@ export const AppStateProvider = ({ children }) => {
     }));
   };
 
-  const isDark = () => {
-    return state.theme === Values.DARK;
+  const isDark = () => state.theme === Values.DARK;
+
+  const atHome = () => state.menuActive === Values.HOME;
+
+  const atAboutMe = () => state.menuActive === Values.ABOUT_ME;
+
+  const atProjects = () => state.menuActive === Values.PROJECTS;
+
+  const toHome = (scroll = true) => {
+    setState((prevState) => ({
+      ...prevState,
+      menuActive: Values.HOME,
+    }));
+    if (scroll) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const toAboutMe = (scroll = true) => {
+    setState((prevState) => ({
+      ...prevState,
+      menuActive: Values.ABOUT_ME,
+    }));
+    if (scroll) {
+      window.scrollTo({
+        top: (window.innerHeight / 4) * 3,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const toProjects = (scroll = true) => {
+    setState((prevState) => ({
+      ...prevState,
+      menuActive: Values.PROJECTS,
+    }));
+    if (scroll) {
+      window.scrollTo({
+        top: (window.innerHeight / 4) * 3,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
     <AppStateContext.Provider
-      value={{ ...state, switchLang, switchTheme, toggleMenu, isDark }}
+      value={{
+        ...state,
+        switchLang,
+        switchTheme,
+        toggleMenu,
+        isDark,
+        atHome,
+        atAboutMe,
+        atProjects,
+        toHome,
+        toAboutMe,
+        toProjects,
+      }}
     >
       {children}
     </AppStateContext.Provider>
