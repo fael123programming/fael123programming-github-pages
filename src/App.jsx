@@ -3,26 +3,14 @@ import Header from "./components/header/Header";
 import "./App.css";
 import { Style } from "./utils/Constants";
 import { useAppState } from "./state/AppStateContext";
-// import useCurrentComponent from "./hooks/useCurrentComponent";
 import Home from "./components/home/Home";
 import AboutMe from "./components/aboutMe/AboutMe";
-import {
-  Animator,
-  ScrollContainer,
-  ScrollPage,
-  batch,
-  Fade,
-  MoveOut,
-  Sticky,
-} from "react-scroll-motion";
 import AboutMeAnimated from "./components/aboutMeAnimated/AboutMeAnimated";
+import Projects from "./components/projects/Projects";
 
 export default function App() {
-  const { theme, toHome, toAboutMe } = useAppState();
+  const { theme, toHome, toAboutMe, toProjects } = useAppState();
 
-  // const current = useCurrentComponent();
-
-  // If theme changes, change CSS variables within App.css
   useEffect(() => {
     const keys = [
       "backgroundColor",
@@ -45,38 +33,25 @@ export default function App() {
     const updateMenuActive = () => {
       const windowHeight = window.innerHeight;
       const scrollY = window.scrollY;
-      if (scrollY <= windowHeight / 2) {
+      if (scrollY <= windowHeight) {
         toHome(false);
-        console.log('HOME')
-      } else if (scrollY <= windowHeight) {
+      } else if (scrollY <= windowHeight * 3) {
         toAboutMe(false);
-        console.log('ABOUT');
+      } else {
+        toProjects(false);
       }
     };
-    window.addEventListener('scroll', updateMenuActive);
-    return () => window.removeEventListener('scroll', updateMenuActive);
-  }, [toHome, toAboutMe]);
+    window.addEventListener("scroll", updateMenuActive);
+    return () => window.removeEventListener("scroll", updateMenuActive);
+  }, [toHome, toAboutMe, toProjects]);
 
   return (
     <>
       <Header />
-      <ScrollContainer snap="proximity" >
-        <ScrollPage>
-          <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
-            <Home />
-          </Animator>
-        </ScrollPage>
-        <ScrollPage>
-          <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
-            <AboutMe />
-          </Animator>
-        </ScrollPage>
-        <ScrollPage>
-          <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
-            <AboutMeAnimated />
-          </Animator>
-        </ScrollPage>
-      </ScrollContainer>
+      <Home />
+      <AboutMe />
+      <AboutMeAnimated />
+      <Projects/>
     </>
   );
 }

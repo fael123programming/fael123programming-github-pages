@@ -65,7 +65,7 @@ export default function AboutMeAnimated() {
         />
       </div>
       <img
-        src={require("../../assets/earth-11595.jpg")}
+        src={require("../../assets/world-map-297446_1920.png")}
         className="img-background-anim"
         alt="Background World Map"
       />

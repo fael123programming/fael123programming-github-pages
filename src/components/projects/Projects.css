@@ -1,7 +1,7 @@
-#about-me {
+#projects {
   display: flex;
   flex: 1;
-  flex-direction: row;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   align-items: center;
@@ -9,42 +9,26 @@
   position: relative;
   /* margin-bottom: 500px; */
 }
-.about-me-col-left {
-  display: flex;
-  height: fit-content;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 900px;
-}
-.about-me-row {
+.projects-headline {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
+  width: 900px;
+  /* background-color: red; */
 }
-.about-me-title {
+.projects-title {
   font-family: "Slackey", sans-serif;
   font-size: 50px;
   font-weight: bold;
-  /* color: var(--textColor); */
   color: #5e50f8;
   filter: drop-shadow(0 0 25px #5e50f8);
   border-radius: 8px;
 }
-.about-icon {
+.projects-icon {
   width: 60px;
   height: 60px;
-  /* color: var(--textColor); */
   color: #cb2424;
   filter: drop-shadow(0 0 25px #cb2424);
-}
-.about-me-para {
-  font-family: "Slackey", sans-serif;
-  font-size: 30px;
-  color: var(--textColor);
-  padding: 1rem;
-  text-align: center;
 }
 .f-1 {
   flex: 1;
@@ -53,6 +37,16 @@
   display: flex;
   justify-content: center;
   flex: 5;
+}
+.img-proj-background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.3;
+  z-index: -9999;
 }
 @keyframes float {
   0%,
@@ -63,34 +57,32 @@
     transform: translateY(20px);
   }
 }
-.float {
+.float-anim {
   animation: float 5s ease-in-out infinite;
   animation-timing-function: ease-in-out;
 }
-.img-background {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.3;
-  z-index: -9999;
+.anim-img {
+  width: clamp(180px, 300px, 480px);
+  height: clamp(180px, 300px, 480px);
+  margin: 1rem;
+  border-radius: 5%;
+  border: 1px solid grey;
+  transition: transform 1s ease-in-out;
+}
+.anim-img:hover {
+  transform: scale(1.5);
 }
 @media (max-width: 799px) {
-  .float {
+  .float-anim {
     display: none;
   }
 }
 @media (max-width: 399px) {
-  .about-me-title {
+  .projects-title {
     font-size: 32px;
   }
-  .about-icon {
+  .projects-icon {
     width: 35px;
     height: 35px;
-  }
-  .about-me-para {
-    font-size: 24px;
   }
 }

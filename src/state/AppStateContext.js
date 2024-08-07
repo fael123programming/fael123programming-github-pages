@@ -63,7 +63,7 @@ export const AppStateProvider = ({ children }) => {
     }));
     if (scroll) {
       window.scrollTo({
-        top: (window.innerHeight / 4) * 3,
+        top: window.innerHeight * 1.5,
         behavior: "smooth",
       });
     }
@@ -76,7 +76,7 @@ export const AppStateProvider = ({ children }) => {
     }));
     if (scroll) {
       window.scrollTo({
-        top: (window.innerHeight / 4) * 3,
+        top: window.innerHeight * 3.5,
         behavior: "smooth",
       });
     }

@@ -23,18 +23,12 @@ export default function Header() {
   } = useAppState();
 
   function navigate(to) {
-    // let lis = document.querySelectorAll(".nav-ul-lis");
-    // for (let li of lis) {
-    //   if (li.id === target && !li.classList.contains("active")) {
-    //     li.classList.add("active");
-    //   } else if (li.id !== target && li.classList.contains("active")) {
-    //     li.classList.remove("active");
-    //   }
-    // }
     if (to === Values.HOME) {
       toHome();
     } else if (to === Values.ABOUT_ME) {
       toAboutMe();
+    } else {
+      toProjects();
     }
     toggleMobileMenu();
   }

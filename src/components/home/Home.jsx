@@ -58,7 +58,7 @@ export default function Home() {
   }, [codes, codeIndex, code, strIndex, titleIndex, titles]);
 
   return (
-    <div id="home" >
+    <div id="home">
       <div className="hero-el">
         <div className="hero-el-row">
           <div className="hero-el-col">

@@ -135,6 +135,40 @@ main();
       "I am a Brazilian software engineer with a degree in Computer Science (IF Goiano) and specialized in Full-Stack development.",
     aboutAboutMePortugal:
       "In the first half of 2023, I was awarded a scholarship to study in Bragança, Portugal, due to my high Grade Point Average (GPA). During the six-month program, I studied disciplines such as Cross-Platform Development and Embedded Systems.",
+    projectsProjects: "Projects",
+    projectsProjectsArray: [
+      {
+        title: "My Financial Control",
+        description:
+          "Track your spending effortlessly with my personal expenses monitoring app. Manage your finances with ease, set budgets, and view detailed reports. Plus, with our admin version, you can control general settings and ensure a seamless experience for all users.",
+      },
+      {
+        title: "My Tanning",
+        description:
+          "Manage your tanning business effortlessly with my app! Schedule and time tanning sessions, receive notifications for position changes, record customer histories, and access a comprehensive dashboard with business insights. Plus, send pre-defined messages to clients via WhatsApp with a single click.",
+      },
+      {
+        title: "JunTOs Therapeutic Metaverses Quiz",
+        description:
+          "JunTOs is a São Paulo-based startup uniting psychologists and computer scientists to create impactful software. One of their products is a web and mobile app for mental health assessment and support, featuring WHOQOL-based questionnaires and AI chat assistance. This project, part of the Conecta Startups initiative funded by the Brazilian government, is developed in collaboration with Hospital Dona Helena.",
+      },
+      {
+        title: "AutisTools - Preference Item Assessment (PIA)",
+        description:
+          "AutisTools by JunTOs Therapeutic Metaverses is an engaging and accessible preference assessment game for autistic kids. Players choose their favorite objects from pairs of cards displayed on the screen, with audio-guided pages enhancing usability. After numerous selections, the game presents a table ranking their most loved items. Fun and insightful, it's designed to help understand and support each child's unique preferences.",
+      },
+      {
+        title: "Journalists' Utility",
+        description:
+          "A sophisticated web application designed for journalists of Instituto Federal Goiano. This app enables users to input their publication texts and receive detailed sentiment analysis powered by the Transformers (Hugging Face) BERT model, developed by Google.  Additionally, the app offers text summarization using the advanced Transformers (Hugging Face) BART model, developed by Meta, providing concise and coherent summaries of the original content. This innovative tool enhances journalistic efficiency and insight by leveraging state-of-the-art AI technology.",
+      },
+      {
+        title: "pycmdmovie",
+        description:
+          "Introducing pycmdmovie, a Python library that transforms images and videos into stunning ASCII art, all rendered in your terminal using OpenGL. Each pixel from the original image is converted to grey-scale and then mapped to a corresponding terminal character, such as asterisks and dots, based on its shading. With pycmdmovie, it's even possible to create a cinema within your terminal, offering a unique and captivating visual experience. Dive into the world of ASCII art and bring your terminal to life like never before!",
+      },
+    ],
+    projectsMoreAbout: "More About",
   },
   [Values.PORTUGUESE]: {
     homeHome: "Bem-vindo",
@@ -240,6 +274,40 @@ main();
       "Eu sou um engenheiro de software Brasileiro, bacharel em Ciência da Computação (IF Goiano) e especializado em desenvolvimento Full-Stack.",
     aboutAboutMePortugal:
       "Na primeira metade de 2023, fui contemplado com uma bolsa de estudos para estudar em Bragança, Portugal, devido ao meu alto Coeficiente de Rendimento (CR). Durante o programa de seis meses, estudei disciplinas como Desenvolvimento Multiplataforma e Sistemas Embarcados.",
+    projectsProjects: "Projetos",
+    projectsProjectsArray: [
+      {
+        title: "Meu Controle Financeiro",
+        description:
+          "Acompanhe seus gastos sem esforço com meu aplicativo de monitoramento de despesas pessoais. Gerencie suas finanças com facilidade, defina orçamentos e visualize relatórios detalhados. Além disso, com nossa versão para administradores, você pode controlar as configurações gerais e garantir uma experiência perfeita para todos os usuários.",
+      },
+      {
+        title: "Meu Bronze",
+        description:
+          "Gerencie seu negócio de bronzeamento sem esforço com meu aplicativo! Agende e cronometre sessões de bronzeamento, receba notificações para mudanças de posição, registre o histórico dos clientes e acesse um painel abrangente com insights do negócio. Além disso, envie mensagens pré-definidas para os clientes via WhatsApp com um único clique.",
+      },
+      {
+        title: "Quiz JunTOs Metaversos Terapêuticos",
+        description:
+          "A JunTOs é uma startup baseada em São Paulo que une psicólogos e cientistas da computação para criar software impactante. Um de seus produtos é um aplicativo web e móvel para avaliação e suporte em saúde mental, com questionários baseados no WHOQOL e assistência por chat com IA. Este projeto, parte da iniciativa Conecta Startups financiada pelo governo brasileiro, é desenvolvido em colaboração com o Hospital Dona Helena.",
+      },
+      {
+        title: "AutisTools - Avaliação de Item de Preferência (AIP)",
+        description:
+          "O AutisTools da JunTOs Therapeutic Metaverses é um jogo envolvente e acessível de avaliação de preferências para crianças autistas. Os jogadores escolhem seus objetos favoritos a partir de pares de cartas exibidas na tela, com páginas guiadas por áudio para aumentar a usabilidade. Após várias seleções, o jogo apresenta uma tabela classificando os itens mais apreciados. Divertido e perspicaz, é projetado para ajudar a entender e apoiar as preferências únicas de cada criança.",
+      },
+      {
+        title: "Ferramenta para Jornalistas",
+        description:
+          "Uma sofisticada aplicação web projetada para jornalistas do Instituto Federal Goiano. Este aplicativo permite que os usuários insiram seus textos de publicações e recebam análises detalhadas de sentimento, impulsionadas pelo modelo Transformers (Hugging Face) BERT, desenvolvido pelo Google. Além disso, o aplicativo oferece a sumarização de textos utilizando o avançado modelo Transformers (Hugging Face) BART, desenvolvido pela Meta, fornecendo resumos concisos e coerentes do conteúdo original. Esta ferramenta inovadora melhora a eficiência e a percepção jornalística, aproveitando a tecnologia de IA de ponta.",
+      },
+      {
+        title: "pycmdmovie",
+        description:
+          "Apresentando o pycmdmovie, uma biblioteca Python que transforma imagens e vídeos em impressionantes obras de arte ASCII, todas renderizadas no seu terminal usando OpenGL. Cada pixel da imagem original é convertido para tons de cinza e mapeado para um caractere correspondente do terminal, como asteriscos e pontos, com base em sua sombra. Com o pycmdmovie, é até possível criar um cinema no seu terminal, oferecendo uma experiência visual única e cativante. Mergulhe no mundo da arte ASCII e dê vida ao seu terminal como nunca antes!",
+      },
+    ],
+    projectsMoreAbout: "Mais Sobre",
   },
 };
 
