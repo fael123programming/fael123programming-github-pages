@@ -13,6 +13,7 @@ export default function Projects() {
         <AiFillCode className="projects-icon" />
         <h1 className="projects-title">{dict.projectsProjects}</h1>
       </div>
+      <Carousel/>
       <img
         src={require("../../assets/mingcute_code-fill.png")}
         className="img-proj-background"

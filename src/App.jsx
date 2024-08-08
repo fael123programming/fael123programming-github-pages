@@ -19,6 +19,7 @@ export default function App() {
       "hireMeHover",
       "colorProgLangBrand",
       "codeBoxBackground",
+      "carouselBackground"
     ];
     const properties = {};
     for (let key of keys) {

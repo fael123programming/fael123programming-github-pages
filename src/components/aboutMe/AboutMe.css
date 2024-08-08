@@ -7,7 +7,12 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  /* margin-bottom: 500px; */
+  margin-top: 50vh;
+}
+@media (max-width: 1299px) {
+  #about-me {
+    margin-top: 1vh;
+  }
 }
 .about-me-col-left {
   display: flex;
@@ -27,17 +32,13 @@
   font-family: "Slackey", sans-serif;
   font-size: 50px;
   font-weight: bold;
-  /* color: var(--textColor); */
-  color: #5e50f8;
-  filter: drop-shadow(0 0 25px #5e50f8);
+  color: var(--textColor);
   border-radius: 8px;
 }
 .about-icon {
   width: 60px;
   height: 60px;
-  /* color: var(--textColor); */
-  color: #cb2424;
-  filter: drop-shadow(0 0 25px #cb2424);
+  color: var(--textColor);
 }
 .about-me-para {
   font-family: "Slackey", sans-serif;
@@ -74,7 +75,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0.3;
+  opacity: 0.1;
   z-index: -9999;
 }
 @media (max-width: 799px) {

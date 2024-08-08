@@ -18,6 +18,7 @@ const Style = {
     hireMeHover: "#237e26",
     colorProgLangBrand: "#005F91",
     codeBoxBackground: "#545454",
+    carouselBackground: "#2b2b2b",
   },
   [Values.LIGHT]: {
     backgroundColor: "white",
@@ -26,6 +27,7 @@ const Style = {
     hireMeHover: "#3bd640",
     colorProgLangBrand: "#005F91",
     codeBoxBackground: "#545454",
+    carouselBackground: "white",
   },
 };
 
@@ -136,7 +138,7 @@ main();
     aboutAboutMePortugal:
       "In the first half of 2023, I was awarded a scholarship to study in Bragança, Portugal, due to my high Grade Point Average (GPA). During the six-month program, I studied disciplines such as Cross-Platform Development and Embedded Systems.",
     projectsProjects: "Projects",
-    projectsProjectsArray: [
+    projectsProjectsCarousel: [
       {
         title: "My Financial Control",
         description:
@@ -275,7 +277,7 @@ main();
     aboutAboutMePortugal:
       "Na primeira metade de 2023, fui contemplado com uma bolsa de estudos para estudar em Bragança, Portugal, devido ao meu alto Coeficiente de Rendimento (CR). Durante o programa de seis meses, estudei disciplinas como Desenvolvimento Multiplataforma e Sistemas Embarcados.",
     projectsProjects: "Projetos",
-    projectsProjectsArray: [
+    projectsProjectsCarousel: [
       {
         title: "Meu Controle Financeiro",
         description:
