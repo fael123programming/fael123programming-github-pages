@@ -7,6 +7,7 @@ import Home from "./components/home/Home";
 import AboutMe from "./components/aboutMe/AboutMe";
 import AboutMeAnimated from "./components/aboutMeAnimated/AboutMeAnimated";
 import Projects from "./components/projects/Projects";
+import Footer from "./components/footer/Footer";
 
 export default function App() {
   const { theme, toHome, toAboutMe, toProjects } = useAppState();
@@ -53,6 +54,7 @@ export default function App() {
       <AboutMe />
       <AboutMeAnimated />
       <Projects/>
+      <Footer/>
     </>
   );
 }

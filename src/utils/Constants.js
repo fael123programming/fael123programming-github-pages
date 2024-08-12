@@ -33,6 +33,7 @@ const Style = {
 
 const Lang = {
   [Values.ENGLISH]: {
+    copyright: 'All rights reserved for fael123programming',
     homeHome: "Home",
     homeAboutMe: "About Me",
     homeProjects: "Projects",
@@ -173,6 +174,7 @@ main();
     projectsMoreAbout: "More About",
   },
   [Values.PORTUGUESE]: {
+    copyright: "Todos os direitos reservados para fael123programming",
     homeHome: "Bem-vindo",
     homeAboutMe: "Sobre Mim",
     homeProjects: "Projetos",
